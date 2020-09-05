@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function toUpper(){
+                var getText = form.lower.value  //nhan gia tri nhap vao
+                var change = getText.toUpperCase()
+                form.result.value = change
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" name="form">
+            Type lowercase: <input type="text" name="lower" onblur="toUpper()"> leave input field to convert to uppercase
+            <input type="text" name="result">
+        </form>
+    </body>
+</html>

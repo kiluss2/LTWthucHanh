@@ -1,0 +1,108 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <!--  tao class CSS de can giua van ban -->
+    <style>
+        div.a {
+            text-align: center;
+
+        }
+    </style>
+    <form action="">
+        <Table border="0">
+            <tr>
+                <!-- The <div class="a"></div> de can giua van ban -->
+                <td colspan="2">
+                    <div class="a">Thông tin sinh viên</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td valign="0">
+                    <table border="0">
+                        <tr>
+                            <td>Mã SV:</td>
+                            <td><input type="text" id="ma_sv"></td>
+                        </tr>
+                        <tr>
+                            <td>Họ tên:</td>
+                            <td><input type="text" id="ho_ten"></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày:</td>
+                            <td><input type="text" id="ngay"></td>
+                        </tr>
+                        <tr>
+                            <td>Tháng:</td>
+                            <td><select id="thang">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>Năm:</td>
+                            <td><select id="nam">
+                                    <option>1998</option>
+                                    <option>1999</option>
+                                    <option>2000</option>
+                                    <option>2001</option>
+                                    <option>2002</option>
+                                </select></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="0">
+                        <tr>
+                            <td>Nam: <input type="radio" name="gioi_tinh" id="nam"></td>
+                            <td> Nữ:
+                                <input type="radio" name="gioi_tinh" id="nu"></td>
+                        </tr>
+                        <tr>
+                            <td valign="0">Địa chỉ:</td>
+                            <td><textarea name="dia_chi" id="dia_chi" cols="20" rows="4"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td valign="0">Quê quán:</td>
+                            <td><textarea name="que_quan" id="que_quan" cols="20" rows="4"></textarea></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </Table>
+        Sở thích: <input type="checkbox" name="so_thich" id="sport"> Sport
+        <input type="checkbox" name="so_thich" id="shopping"> Shopping
+        <input type="checkbox" name="all" id="all" onclick="javascript:checkAll(this)"> All <br><br>
+        <input type="submit">
+        <input type="reset">
+        <input type="button" value=Cancel id="cancel">
+    </form>
+    <script language="javascript">
+        function checkAll(o) {
+            var boxes = document.getElementsByTagName("input");
+            for (var x = 0; x < boxes.length; x++) {
+                var obj = boxes[x];
+                if (obj.type == "checkbox") {
+                    if (obj.name != "check")
+                        obj.checked = o.checked;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
